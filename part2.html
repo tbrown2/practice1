@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta author='Tom' charset="utf-8">
+		<style>
+
+			body{
+				font-size: 16px;
+				font-family: helvetica;
+			}
+
+			legend {
+				font-weight: bold;
+			}
+			fieldset {
+				background-color: lightyellow;
+				border: 10px solid yellow;
+				width: 720px;
+				margin-bottom: 10px;
+			}
+
+			label {
+				width: 180px;
+				display: inline-block;
+				text-align: right;
+			}
+
+			textarea {
+				width: 360px;
+				height: 50px;
+			}
+			
+			.big {
+				background-color: purple;
+				color:white;
+				padding: .15em;
+			}
+
+			.small {
+				background-color: red;
+				color: white;
+				padding: .15em;
+			}
+
+			span {
+				width: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+		<br>
+		<form action='http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php ' method='post' entype='multipart/form-data'>
+			<fieldset>
+				<legend>Your Face</legend>
+				<label for='your_image'>Your image: </label>
+				<input type='file' name='your_image' id='your_image' required>
+				<br>
+
+				<label for='image_preview'>Image preview:</label>
+				<img name='preview' id='preview'>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your General Details</legend>
+				<label for='fname'>Name:</label>
+				<input type='text' id='fname' name='fname' placeholder="Your Full Name" required>
+				<br>
+
+				<label for='gender'>Gender:</label>
+				<input type='radio' name='gender' id='gender' value='man' required><span>Man</span>
+				<input type='radio' name='gender' id='gender' value='woman' required><span>Woman</span>
+				<br>
+
+				<label for='age'>Age:</label>
+				<input type='number' name='age' id='age' value='18' min='0' max='99' required>
+				<br>
+
+				<label for='DOB'>Date of Birth:</label>
+				<input type='Date' name='DOB' id='DOB' required>
+				<br>
+
+				<label for='fav_color'>Favorite Color:</label>
+				<input type='Color' name='fav_color' id='fav_color' required>
+				<br>
+
+				<label for='country'>Which Country:</label>
+				<select id='country' name='country'>
+					<option value=''></option>
+					<option value="United States">United States</option>
+					<option value="China">China</option>
+					<option value="Japan">Japan</option>
+					<option value="Canada">Canada</option>
+					<option value="Mongolia">Mongolia</option>
+					<option value="France">France</option>
+				</select>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<LEGEND>Your Indicators</LEGEND>
+
+				<label for='height'>Height: </label>
+				<span class='small'>Short</span>
+				<input type='range' min='0' max='100' id='height' name='height' step='5' value='50' required>
+				<span class='big'>Tall</span>
+				<br>
+
+				<label for='salary'>Salary:</label> <span class='small'>Poor</span>
+				<input type='range' min='0' max='100' id='salary' name='salary' step='5' value='50' required>
+				<span class='big'>Rich</span>
+				<br>
+			</fieldset>
+
+			<fieldset>
+				<LEGEND>Your Contact Information</LEGEND>
+				<label for='my_email'>Email:</label>
+				<input type='email' name='my_email' id='my_email' required>
+				<br>
+
+				<label for='number'>Mobile:</label>
+				<input type='tel' name='number' id='number' required>
+				<br>
+
+				<label for='address'>Address:</label>
+				<textarea name='address' rows='3' id='address'></textarea>
+				<br>
+
+				<label for='contact_method'>Method to contact you: </label>
+				<input type='checkbox' name='contact_method' id='contact_method' value="contact_email" ><span>Email</span> 
+				<input type='checkbox' name='contact_method' id='contact_method' value='contact_whatsapp' ><span>Whatsapp</span> 
+				<input type='checkbox' name='contact_method' id='contact_method' value='contact_thisapp' ><span>In-app Chat</span>
+				<br>
+			</fieldset>
+
+			<input type='submit' value='Submit'> 
+		<form>
+	</body>
+</html> 
